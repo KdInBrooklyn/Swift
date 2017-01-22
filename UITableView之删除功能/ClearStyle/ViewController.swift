@@ -4,7 +4,7 @@
 //
 //  Created by Audrey M Tam on 4/08/2014.
 //  Copyright (c) 2014 Ray Wenderlich. All rights reserved.
-//
+//https://www.raywenderlich.com/77974/making-a-gesture-driven-to-do-list-app-like-clear-in-swift-part-1#ckpt2
 
 import UIKit
 
