@@ -15,6 +15,8 @@
 		48767A0E1E2393B0007A935E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48767A0C1E2393B0007A935E /* LaunchScreen.storyboard */; };
 		48767A191E2393B1007A935E /* Runtime_____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48767A181E2393B1007A935E /* Runtime_____Tests.m */; };
 		48767A241E2393B1007A935E /* Runtime_____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48767A231E2393B1007A935E /* Runtime_____UITests.m */; };
+		4887BC4A1E56F6A6004E603C /* ClassObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4887BC491E56F6A6004E603C /* ClassObject.m */; };
+		4887BC4D1E56F6D4004E603C /* ObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4887BC4C1E56F6D4004E603C /* ObjectTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		48767A1F1E2393B1007A935E /* Runtime-类和对象UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Runtime-类和对象UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48767A231E2393B1007A935E /* Runtime_____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Runtime_____UITests.m"; sourceTree = "<group>"; };
 		48767A251E2393B1007A935E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4887BC481E56F6A6004E603C /* ClassObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassObject.h; path = runtime/ClassObject.h; sourceTree = "<group>"; };
+		4887BC491E56F6A6004E603C /* ClassObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassObject.m; path = runtime/ClassObject.m; sourceTree = "<group>"; };
+		4887BC4B1E56F6D4004E603C /* ObjectTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectTest.h; path = runtime/ObjectTest.h; sourceTree = "<group>"; };
+		4887BC4C1E56F6D4004E603C /* ObjectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ObjectTest.m; path = runtime/ObjectTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,10 @@
 				48767A021E2393B0007A935E /* AppDelegate.m */,
 				48767A041E2393B0007A935E /* ViewController.h */,
 				48767A051E2393B0007A935E /* ViewController.m */,
+				4887BC481E56F6A6004E603C /* ClassObject.h */,
+				4887BC491E56F6A6004E603C /* ClassObject.m */,
+				4887BC4B1E56F6D4004E603C /* ObjectTest.h */,
+				4887BC4C1E56F6D4004E603C /* ObjectTest.m */,
 				48767A071E2393B0007A935E /* Main.storyboard */,
 				48767A0A1E2393B0007A935E /* Assets.xcassets */,
 				48767A0C1E2393B0007A935E /* LaunchScreen.storyboard */,
@@ -277,6 +287,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				48767A061E2393B0007A935E /* ViewController.m in Sources */,
+				4887BC4D1E56F6D4004E603C /* ObjectTest.m in Sources */,
+				4887BC4A1E56F6A6004E603C /* ClassObject.m in Sources */,
 				48767A031E2393B0007A935E /* AppDelegate.m in Sources */,
 				48767A001E2393B0007A935E /* main.m in Sources */,
 			);
@@ -516,6 +528,7 @@
 				48767A2A1E2393B1007A935E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48767A2B1E2393B1007A935E /* Build configuration list for PBXNativeTarget "Runtime-类和对象Tests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +537,7 @@
 				48767A2D1E2393B1007A935E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48767A2E1E2393B1007A935E /* Build configuration list for PBXNativeTarget "Runtime-类和对象UITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +546,7 @@
 				48767A301E2393B1007A935E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
