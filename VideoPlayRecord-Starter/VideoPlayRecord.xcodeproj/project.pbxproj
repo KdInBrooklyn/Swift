@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		486A9CB11E5D2B0200B286DC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 486A9CB01E5D2B0200B286DC /* AssetsLibrary.framework */; };
+		486A9CB31E5D2B1100B286DC /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 486A9CB21E5D2B1100B286DC /* CoreMedia.framework */; };
+		486A9CB51E5D2B3900B286DC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 486A9CB41E5D2B3900B286DC /* AVFoundation.framework */; };
 		84CD750A1A7D35A000A6DB54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD75091A7D35A000A6DB54 /* AppDelegate.swift */; };
 		84CD750C1A7D35A000A6DB54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD750B1A7D35A000A6DB54 /* ViewController.swift */; };
 		84CD750F1A7D35A000A6DB54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CD750D1A7D35A000A6DB54 /* Main.storyboard */; };
@@ -31,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		486A9CB01E5D2B0200B286DC /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		486A9CB21E5D2B1100B286DC /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		486A9CB41E5D2B3900B286DC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		84CD75041A7D35A000A6DB54 /* VideoPlayRecord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayRecord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CD75081A7D35A000A6DB54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84CD75091A7D35A000A6DB54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				486A9CB51E5D2B3900B286DC /* AVFoundation.framework in Frameworks */,
+				486A9CB31E5D2B1100B286DC /* CoreMedia.framework in Frameworks */,
+				486A9CB11E5D2B0200B286DC /* AssetsLibrary.framework in Frameworks */,
 				909991551E5C850E00D69CA7 /* MobileCoreServices.framework in Frameworks */,
 				909991531E5C850500D69CA7 /* MediaPlayer.framework in Frameworks */,
 			);
@@ -131,6 +140,9 @@
 		909991511E5C850500D69CA7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				486A9CB41E5D2B3900B286DC /* AVFoundation.framework */,
+				486A9CB21E5D2B1100B286DC /* CoreMedia.framework */,
+				486A9CB01E5D2B0200B286DC /* AssetsLibrary.framework */,
 				909991541E5C850E00D69CA7 /* MobileCoreServices.framework */,
 				909991521E5C850500D69CA7 /* MediaPlayer.framework */,
 			);

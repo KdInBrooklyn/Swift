@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6lg-El-Nwr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6lg-El-Nwr">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,38 +18,38 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MT0-JR-p90">
-                                <rect key="frame" x="225" y="247" width="150" height="30"/>
+                                <rect key="frame" x="85.5" y="231" width="149" height="30"/>
                                 <state key="normal" title="Select and Play Video">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="KbI-wn-Irm" kind="show" id="2Fc-Ah-eqC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOp-nD-QCk">
-                                <rect key="frame" x="220" y="285" width="161" height="30"/>
+                                <rect key="frame" x="81" y="269" width="159" height="30"/>
                                 <state key="normal" title="Record and Save Video">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="7Bs-0P-9vZ" kind="show" id="8p6-mJ-94u"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdU-4i-c5p">
-                                <rect key="frame" x="257" y="323" width="86" height="30"/>
+                                <rect key="frame" x="116.5" y="307" width="87" height="30"/>
                                 <state key="normal" title="Merge Video">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="PVi-BS-fPG" kind="show" id="ib6-vp-ET6"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kdU-4i-c5p" firstAttribute="top" secondItem="cOp-nD-QCk" secondAttribute="bottom" constant="8" symbolic="YES" id="CQO-iU-zPm"/>
                             <constraint firstItem="cOp-nD-QCk" firstAttribute="centerX" secondItem="kdU-4i-c5p" secondAttribute="centerX" id="Da0-XJ-T3O"/>
@@ -69,20 +74,20 @@
                         <viewControllerLayoutGuide type="bottom" id="b0R-qi-G8z"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TbW-Ej-C86">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daB-UI-jqT">
-                                <rect key="frame" x="264" y="285" width="73" height="30"/>
+                                <rect key="frame" x="124" y="269" width="72" height="30"/>
                                 <state key="normal" title="Play Video">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="playVideo:" destination="KbI-wn-Irm" eventType="touchUpInside" id="qYo-JH-hqr"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="daB-UI-jqT" firstAttribute="centerX" secondItem="TbW-Ej-C86" secondAttribute="centerX" id="Itc-Uw-laQ"/>
                             <constraint firstItem="daB-UI-jqT" firstAttribute="centerY" secondItem="TbW-Ej-C86" secondAttribute="centerY" id="pNN-TM-p5J"/>
@@ -102,20 +107,20 @@
                         <viewControllerLayoutGuide type="bottom" id="c5B-6d-pFy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="krM-rX-9hm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lP-Sg-Sqa">
-                                <rect key="frame" x="254" y="285" width="93" height="30"/>
+                                <rect key="frame" x="114" y="269" width="92" height="30"/>
                                 <state key="normal" title="Record Video">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="record:" destination="7Bs-0P-9vZ" eventType="touchUpInside" id="gtB-6J-7HM"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6lP-Sg-Sqa" firstAttribute="centerY" secondItem="krM-rX-9hm" secondAttribute="centerY" id="U9R-w7-JCh"/>
                             <constraint firstItem="6lP-Sg-Sqa" firstAttribute="centerX" secondItem="krM-rX-9hm" secondAttribute="centerX" id="sx5-Vc-rhs"/>
@@ -135,50 +140,50 @@
                         <viewControllerLayoutGuide type="bottom" id="5PE-qP-e9S"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="m01-oq-bK2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9y5-7i-bao">
-                                <rect key="frame" x="255" y="174" width="90" height="30"/>
+                                <rect key="frame" x="115.5" y="174" width="87" height="30"/>
                                 <state key="normal" title="Load Asset 1">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="loadAssetOne:" destination="PVi-BS-fPG" eventType="touchUpInside" id="TtI-ss-yLi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TF-ff-3Xd">
-                                <rect key="frame" x="255" y="212" width="90" height="30"/>
+                                <rect key="frame" x="115.5" y="212" width="89" height="30"/>
                                 <state key="normal" title="Load Asset 2">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="loadAssetTwo:" destination="PVi-BS-fPG" eventType="touchUpInside" id="tqh-fQ-ajO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Fs-zE-YBm">
-                                <rect key="frame" x="261" y="250" width="79" height="30"/>
+                                <rect key="frame" x="122" y="250" width="77" height="30"/>
                                 <state key="normal" title="Load Audio">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="loadAudio:" destination="PVi-BS-fPG" eventType="touchUpInside" id="7NL-od-Bjv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duD-4r-Z69">
-                                <rect key="frame" x="244" y="288" width="112" height="30"/>
+                                <rect key="frame" x="104.5" y="288" width="111" height="30"/>
                                 <state key="normal" title="Merge and Save">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="merge:" destination="PVi-BS-fPG" eventType="touchUpInside" id="Ney-E9-toZ"/>
                                 </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ExX-aW-EQK">
-                                <rect key="frame" x="372" y="293" width="20" height="20"/>
+                                <rect key="frame" x="231.5" y="293" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4TF-ff-3Xd" firstAttribute="top" secondItem="9y5-7i-bao" secondAttribute="bottom" constant="8" symbolic="YES" id="R9g-xp-wQH"/>
                             <constraint firstItem="4TF-ff-3Xd" firstAttribute="centerX" secondItem="m01-oq-bK2" secondAttribute="centerX" id="TQN-rZ-Wfr"/>

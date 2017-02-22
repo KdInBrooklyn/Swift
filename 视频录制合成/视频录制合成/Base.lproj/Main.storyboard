@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="H92-02-ttH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="视频录制合成" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeW-CW-H6R" customClass="Video">
+                                <rect key="frame" x="157" y="269" width="62" height="30"/>
+                                <state key="normal" title="录制视频">
+                                    <color key="titleColor" red="0.78203124999999996" green="0.096186871270732791" blue="0.37041816787678594" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BNo-ev-dwv" kind="presentation" id="O55-s0-fUc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcB-lr-HGF">
+                                <rect key="frame" x="164.5" y="418.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wcB-lr-HGF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VrD-Zn-ue2"/>
+                            <constraint firstItem="wcB-lr-HGF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="axI-MJ-jp6"/>
+                            <constraint firstItem="SeW-CW-H6R" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="lVc-PY-VdW"/>
+                            <constraint firstItem="SeW-CW-H6R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xWB-Ez-T4T"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bHn-ZF-HUI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831" y="-169"/>
+        </scene>
+        <!--Video Record View Controller-->
+        <scene sceneID="zax-4K-egK">
+            <objects>
+                <viewController id="BNo-ev-dwv" customClass="VideoRecordViewController" customModule="视频录制合成" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qXL-Xn-2m0"/>
+                        <viewControllerLayoutGuide type="bottom" id="ks8-XG-tdc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zJH-Tp-EYm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVe-50-7mU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPG-dw-hEf">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                        <color key="backgroundColor" red="0.78203124999999996" green="0.20168881090509919" blue="0.1584659266872851" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="482-Mh-fQn"/>
+                                            <constraint firstAttribute="height" constant="44" id="jxb-u3-Kvf"/>
+                                        </constraints>
+                                        <state key="normal" image="close"/>
+                                        <connections>
+                                            <action selector="closeButtonDidClick:" destination="BNo-ev-dwv" eventType="touchUpInside" id="GKd-ob-VrL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJo-5l-BiY">
+                                        <rect key="frame" x="282" y="0.0" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="UUe-DT-lfq"/>
+                                            <constraint firstAttribute="width" constant="44" id="rUE-VY-3jZ"/>
+                                        </constraints>
+                                        <state key="normal" image="record_flash_off"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="se7-pl-j3h">
+                                        <rect key="frame" x="331" y="0.0" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="trM-M8-IGI"/>
+                                            <constraint firstAttribute="height" constant="44" id="uO4-ai-5SQ"/>
+                                        </constraints>
+                                        <state key="normal" image="record_camera"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.083972369262865929" green="0.020442546169310155" blue="0.10695112179487176" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="se7-pl-j3h" firstAttribute="top" secondItem="QVe-50-7mU" secondAttribute="top" id="FXw-16-k6b"/>
+                                    <constraint firstItem="RPG-dw-hEf" firstAttribute="leading" secondItem="QVe-50-7mU" secondAttribute="leading" id="JdV-G4-kpb"/>
+                                    <constraint firstAttribute="trailing" secondItem="oJo-5l-BiY" secondAttribute="trailing" constant="49" id="KHR-ma-fuX"/>
+                                    <constraint firstItem="se7-pl-j3h" firstAttribute="leading" secondItem="oJo-5l-BiY" secondAttribute="trailing" constant="5" id="Zz8-Fd-8LB"/>
+                                    <constraint firstItem="oJo-5l-BiY" firstAttribute="top" secondItem="QVe-50-7mU" secondAttribute="top" id="amG-2g-W4G"/>
+                                    <constraint firstItem="RPG-dw-hEf" firstAttribute="top" secondItem="QVe-50-7mU" secondAttribute="top" id="n1z-Rc-Yvo"/>
+                                    <constraint firstAttribute="height" constant="44" id="wSr-xc-1EI"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2p8-tX-sdN">
+                                <rect key="frame" x="0.0" y="44" width="375" height="446"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="record_start" translatesAutoresizingMaskIntoConstraints="NO" id="j2j-jg-qUE">
+                                <rect key="frame" x="148" y="520" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="MMx-rh-nLw"/>
+                                    <constraint firstAttribute="width" constant="80" id="R5x-qK-8XO"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ig3-W8-TUv">
+                                <rect key="frame" x="20" y="520" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="G0e-MG-d2x"/>
+                                    <constraint firstAttribute="height" constant="80" id="eph-Qu-k2b"/>
+                                </constraints>
+                                <state key="normal" image="record_del"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kv0-sy-dfp">
+                                <rect key="frame" x="275" y="520" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="WQX-cx-TE6"/>
+                                    <constraint firstAttribute="height" constant="80" id="xGF-71-TA1"/>
+                                </constraints>
+                                <state key="normal" image="record_done"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ig3-W8-TUv" firstAttribute="top" secondItem="qXL-Xn-2m0" secondAttribute="bottom" constant="500" id="Df4-LU-mB6"/>
+                            <constraint firstAttribute="trailing" secondItem="QVe-50-7mU" secondAttribute="trailing" id="MU8-dB-4hv"/>
+                            <constraint firstAttribute="trailing" secondItem="Kv0-sy-dfp" secondAttribute="trailing" constant="20" id="MwU-do-evS"/>
+                            <constraint firstItem="Kv0-sy-dfp" firstAttribute="top" secondItem="2p8-tX-sdN" secondAttribute="bottom" constant="30" id="Ohp-fG-yfe"/>
+                            <constraint firstItem="2p8-tX-sdN" firstAttribute="top" secondItem="QVe-50-7mU" secondAttribute="bottom" id="Oxj-hZ-KKu"/>
+                            <constraint firstItem="ig3-W8-TUv" firstAttribute="leading" secondItem="zJH-Tp-EYm" secondAttribute="leading" constant="20" id="RGe-Ry-p5M"/>
+                            <constraint firstItem="QVe-50-7mU" firstAttribute="leading" secondItem="zJH-Tp-EYm" secondAttribute="leading" id="YH5-ex-IaB"/>
+                            <constraint firstItem="QVe-50-7mU" firstAttribute="top" secondItem="zJH-Tp-EYm" secondAttribute="top" id="drD-FW-IqA"/>
+                            <constraint firstItem="j2j-jg-qUE" firstAttribute="top" secondItem="2p8-tX-sdN" secondAttribute="bottom" constant="30" id="g78-Vs-bb4"/>
+                            <constraint firstItem="j2j-jg-qUE" firstAttribute="centerX" secondItem="zJH-Tp-EYm" secondAttribute="centerX" id="hN8-xd-sRZ"/>
+                            <constraint firstItem="2p8-tX-sdN" firstAttribute="leading" secondItem="zJH-Tp-EYm" secondAttribute="leading" id="m0a-S6-GGj"/>
+                            <constraint firstItem="ig3-W8-TUv" firstAttribute="top" secondItem="2p8-tX-sdN" secondAttribute="bottom" constant="30" id="oPM-dg-44M"/>
+                            <constraint firstAttribute="trailing" secondItem="2p8-tX-sdN" secondAttribute="trailing" id="wpg-Kr-KsI"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="YAu-hE-xDg"/>
+                    <connections>
+                        <outlet property="closeBtn" destination="RPG-dw-hEf" id="hCP-bF-SS5"/>
+                        <outlet property="closeButtonDidClick" destination="RPG-dw-hEf" id="cvw-5Y-pQ1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XpJ-0g-9jR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1648.8" y="-169.56521739130437"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3Le-hn-Ovy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H92-02-ttH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YQ0-sm-mBs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BhV-uI-Qxa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ebv-KF-phc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="-646.32683658170924"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="30" height="30"/>
+        <image name="record_camera" width="48" height="44"/>
+        <image name="record_del" width="40" height="40"/>
+        <image name="record_done" width="40" height="40"/>
+        <image name="record_flash_off" width="30" height="30"/>
+        <image name="record_start" width="74" height="74"/>
+    </resources>
+</document>
