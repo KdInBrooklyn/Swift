@@ -29,13 +29,14 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 - (IBAction)fistButtonDidClick:(UIButton *)sender {
     
-    SecondViewController *secondVC = [[SecondViewController alloc] init];
-    [self presentViewController:secondVC animated:true completion:nil];
+//    SecondViewController *secondVC = [[SecondViewController alloc] init];
+    SecondViewController *secondVC = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
     secondVC.transitioningDelegate = self;
+    [self presentViewController:secondVC animated:true completion:nil];
+    
 }
 
 - (IBAction)secondButtonDidClick:(UIButton *)sender {

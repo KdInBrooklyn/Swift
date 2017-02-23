@@ -2,7 +2,7 @@
 //  SecondViewController.m
 //  自定义非交互式转场动画
 //
-//  Created by BoBo on 17/2/22.
+//  Created by BoBo on 17/2/23.
 //  Copyright © 2017年 Li Sen. All rights reserved.
 //
 
@@ -16,15 +16,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)backButtonDidClick:(UIButton *)sender {
-    [self dismissViewControllerAnimated:true completion:nil];
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
+*/
 
 @end

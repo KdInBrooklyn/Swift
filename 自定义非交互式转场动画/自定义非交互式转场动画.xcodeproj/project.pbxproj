@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		486A0B911E5EEC2300054C39 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 486A0B8F1E5EEC2300054C39 /* SecondViewController.m */; };
+		486A0B921E5EEC2300054C39 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486A0B901E5EEC2300054C39 /* SecondViewController.xib */; };
 		486A9E191E5D86CC00B286DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 486A9E181E5D86CC00B286DC /* main.m */; };
 		486A9E1C1E5D86CC00B286DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 486A9E1B1E5D86CC00B286DC /* AppDelegate.m */; };
 		486A9E1F1E5D86CC00B286DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 486A9E1E1E5D86CC00B286DC /* ViewController.m */; };
@@ -15,7 +17,6 @@
 		486A9E271E5D86CC00B286DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486A9E251E5D86CC00B286DC /* LaunchScreen.storyboard */; };
 		486A9E321E5D86CC00B286DC /* ___________Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 486A9E311E5D86CC00B286DC /* ___________Tests.m */; };
 		486A9E3D1E5D86CD00B286DC /* ___________UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 486A9E3C1E5D86CD00B286DC /* ___________UITests.m */; };
-		486A9E4C1E5D92BE00B286DC /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 486A9E4B1E5D92BE00B286DC /* SecondViewController.m */; };
 		486A9E521E5D93DE00B286DC /* CustomAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 486A9E511E5D93DE00B286DC /* CustomAnimator.m */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		486A0B8E1E5EEC2300054C39 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		486A0B8F1E5EEC2300054C39 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		486A0B901E5EEC2300054C39 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 		486A9E141E5D86CC00B286DC /* 自定义非交互式转场动画.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "自定义非交互式转场动画.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		486A9E181E5D86CC00B286DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		486A9E1A1E5D86CC00B286DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,8 +57,6 @@
 		486A9E381E5D86CD00B286DC /* 自定义非交互式转场动画UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "自定义非交互式转场动画UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		486A9E3C1E5D86CD00B286DC /* ___________UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___________UITests.m"; sourceTree = "<group>"; };
 		486A9E3E1E5D86CD00B286DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		486A9E4A1E5D92BE00B286DC /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		486A9E4B1E5D92BE00B286DC /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		486A9E501E5D93DE00B286DC /* CustomAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnimator.h; sourceTree = "<group>"; };
 		486A9E511E5D93DE00B286DC /* CustomAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnimator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,8 +113,9 @@
 				486A9E1B1E5D86CC00B286DC /* AppDelegate.m */,
 				486A9E1D1E5D86CC00B286DC /* ViewController.h */,
 				486A9E1E1E5D86CC00B286DC /* ViewController.m */,
-				486A9E4A1E5D92BE00B286DC /* SecondViewController.h */,
-				486A9E4B1E5D92BE00B286DC /* SecondViewController.m */,
+				486A0B8E1E5EEC2300054C39 /* SecondViewController.h */,
+				486A0B8F1E5EEC2300054C39 /* SecondViewController.m */,
+				486A0B901E5EEC2300054C39 /* SecondViewController.xib */,
 				486A9E501E5D93DE00B286DC /* CustomAnimator.h */,
 				486A9E511E5D93DE00B286DC /* CustomAnimator.m */,
 				486A9E201E5D86CC00B286DC /* Main.storyboard */,
@@ -257,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				486A0B921E5EEC2300054C39 /* SecondViewController.xib in Resources */,
 				486A9E271E5D86CC00B286DC /* LaunchScreen.storyboard in Resources */,
 				486A9E241E5D86CC00B286DC /* Assets.xcassets in Resources */,
 				486A9E221E5D86CC00B286DC /* Main.storyboard in Resources */,
@@ -284,8 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				486A0B911E5EEC2300054C39 /* SecondViewController.m in Sources */,
 				486A9E521E5D93DE00B286DC /* CustomAnimator.m in Sources */,
-				486A9E4C1E5D92BE00B286DC /* SecondViewController.m in Sources */,
 				486A9E1F1E5D86CC00B286DC /* ViewController.m in Sources */,
 				486A9E1C1E5D86CC00B286DC /* AppDelegate.m in Sources */,
 				486A9E191E5D86CC00B286DC /* main.m in Sources */,
@@ -522,6 +526,7 @@
 				486A9E431E5D86CD00B286DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		486A9E441E5D86CD00B286DC /* Build configuration list for PBXNativeTarget "自定义非交互式转场动画Tests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +535,7 @@
 				486A9E461E5D86CD00B286DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		486A9E471E5D86CD00B286DC /* Build configuration list for PBXNativeTarget "自定义非交互式转场动画UITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +544,7 @@
 				486A9E491E5D86CD00B286DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
