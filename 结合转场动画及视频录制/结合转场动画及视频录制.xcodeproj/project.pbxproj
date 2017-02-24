@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		487CC5D81E5FDF2C006E2D25 /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487CC5D71E5FDF2C006E2D25 /* FocusView.swift */; };
+		487CC5DA1E601100006E2D25 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487CC5D91E601100006E2D25 /* RecordView.swift */; };
 		901E03AF1E5F1542006AC999 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901E03AE1E5F1542006AC999 /* AppDelegate.swift */; };
 		901E03B41E5F1542006AC999 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901E03B21E5F1542006AC999 /* Main.storyboard */; };
 		901E03B61E5F1542006AC999 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 901E03B51E5F1542006AC999 /* Assets.xcassets */; };
@@ -73,6 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		487CC5D71E5FDF2C006E2D25 /* FocusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FocusView.swift; path = "结合转场动画及视频录制/FocusView.swift"; sourceTree = SOURCE_ROOT; };
+		487CC5D91E601100006E2D25 /* RecordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecordView.swift; path = "结合转场动画及视频录制/RecordView.swift"; sourceTree = SOURCE_ROOT; };
 		901E03AB1E5F1542006AC999 /* 结合转场动画及视频录制.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "结合转场动画及视频录制.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		901E03AE1E5F1542006AC999 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		901E03B31E5F1542006AC999 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -231,6 +235,8 @@
 		901E03DF1E5F159A006AC999 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				487CC5D71E5FDF2C006E2D25 /* FocusView.swift */,
+				487CC5D91E601100006E2D25 /* RecordView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -438,6 +444,7 @@
 				901E04121E5F174F006AC999 /* ConstraintItem.swift in Sources */,
 				901E04291E5F174F006AC999 /* LayoutConstraint.swift in Sources */,
 				901E041F1E5F174F006AC999 /* ConstraintOffsetTarget.swift in Sources */,
+				487CC5DA1E601100006E2D25 /* RecordView.swift in Sources */,
 				901E03AF1E5F1542006AC999 /* AppDelegate.swift in Sources */,
 				901E041B1E5F174F006AC999 /* ConstraintMakerFinalizable.swift in Sources */,
 				901E03E31E5F15CB006AC999 /* CustomAnimator.swift in Sources */,
@@ -468,6 +475,7 @@
 				901E041E1E5F174F006AC999 /* ConstraintMultiplierTarget.swift in Sources */,
 				901E04201E5F174F006AC999 /* ConstraintPriority.swift in Sources */,
 				901E04261E5F174F006AC999 /* ConstraintViewDSL.swift in Sources */,
+				487CC5D81E5FDF2C006E2D25 /* FocusView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,6 +724,7 @@
 				901E03D51E5F1542006AC999 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		901E03D61E5F1542006AC999 /* Build configuration list for PBXNativeTarget "结合转场动画及视频录制Tests" */ = {
 			isa = XCConfigurationList;
@@ -724,6 +733,7 @@
 				901E03D81E5F1542006AC999 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		901E03D91E5F1542006AC999 /* Build configuration list for PBXNativeTarget "结合转场动画及视频录制UITests" */ = {
 			isa = XCConfigurationList;
@@ -732,6 +742,7 @@
 				901E03DB1E5F1542006AC999 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
