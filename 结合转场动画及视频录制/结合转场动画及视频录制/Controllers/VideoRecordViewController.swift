@@ -7,9 +7,15 @@
 //
 
 import UIKit
+
+//MARK: - 系统框架
 import AVFoundation
 import AssetsLibrary
 import MobileCoreServices
+
+/**
+ 本Demo的实现思路是:将录制好的视频文件保存到tmp下面的一个子目录中去.暂时并未实现添加水印功能/视频合并功能
+ */
 
 typealias propertyChangeClosure = (_ captureDevice: AVCaptureDevice) -> Void
 
@@ -18,6 +24,15 @@ class VideoRecordViewController: UIViewController {
     //MARK: - properties
     var kViewTag: Int = 0
     fileprivate var viewSpace: CGFloat = 10.0
+    fileprivate var isRecording: Bool = false   //用来判断是否正在录制视频
+    
+    /**
+     计算当时视频的录制时长
+     */
+    fileprivate var displayerLink: CADisplayLink?
+    fileprivate let timeInterval: Int = 1
+    fileprivate var currentTime: Int = 0
+    //
     
     fileprivate lazy var titleBgView:UIView = { [unowned self] in
         let view:UIView = UIView(frame: CGRect(x: 0.0, y: 20.0, width: self.view.frame.size.width, height: 44.0));
@@ -328,6 +343,11 @@ class VideoRecordViewController: UIViewController {
     
     //视频录制
     fileprivate func recordVideo() {
+        
+        if (self.isRecording) { //判断当前的视频录制状态,如果是正在录制,直接返回,否则会碎片化的录制视频
+            return
+        }
+        
         //根据设备输出获得连接
         let captureConnection: AVCaptureConnection = self.captureMovieFileOutput.connection(withMediaType: AVMediaTypeVideo)
         //根据连接取得设备输出的数据
@@ -347,9 +367,7 @@ class VideoRecordViewController: UIViewController {
             //将录制的视频文件保存到上面的路径里面
             self.captureMovieFileOutput.startRecording(toOutputFileURL: fileURL, recordingDelegate: self)
             
-            
-            print(outputFilePath)
-            
+            print("--------------------currentTime--------------------:  \(self.currentTime)")
             
         } else { //视频录制过程中的按钮点击事件
             self.captureMovieFileOutput.stopRecording()
@@ -370,7 +388,44 @@ class VideoRecordViewController: UIViewController {
         }
         
     }
+ 
     
+    /**
+     计时器功能
+     */
+    fileprivate func start() {
+        createDisplayLink()
+    }
+    
+    fileprivate func stop() {
+        freeDisplayLink()
+    }
+    
+    fileprivate func remove() {
+        
+    }
+    
+    fileprivate func createDisplayLink() {
+        if (displayerLink == nil) {
+            displayerLink = CADisplayLink(target: self, selector: #selector(VideoRecordViewController.eventDisplayLinkResponse))
+            displayerLink?.frameInterval = 60
+            displayerLink?.add(to: RunLoop.current, forMode: .commonModes)
+        }
+    }
+    
+    fileprivate func freeDisplayLink() {
+         print("recentlyTime:  \(self.currentTime)")
+        if let _ = displayerLink {
+            displayerLink?.invalidate()
+            displayerLink = nil
+            currentTime = 0
+        }
+    }
+    
+    func eventDisplayLinkResponse() {
+        currentTime += timeInterval
+        print("currentTime:  \(self.currentTime)")
+    }
 }
 
 //转场代理
@@ -388,7 +443,9 @@ extension VideoRecordViewController: UIViewControllerTransitioningDelegate {
 extension VideoRecordViewController: AVCaptureFileOutputRecordingDelegate {
     //开始录制
     func capture(_ captureOutput: AVCaptureFileOutput!, didStartRecordingToOutputFileAt fileURL: URL!, fromConnections connections: [Any]!) {
+        self.isRecording = true;
         print("开始录制")
+        
     }
     
     //录制完成
@@ -408,18 +465,6 @@ extension VideoRecordViewController: AVCaptureFileOutputRecordingDelegate {
 //            }
             
         }
-        
-        let fileManager: FileManager = FileManager.default
-        
-        do {
-            let files = try fileManager.contents(atPath: self.videoPath!)
-            
-            for item in files! {
-//                print(item)
-            }
-        } catch {
-            print("\(error.localizedDescription)")
-        }
     }
 }
 
@@ -427,11 +472,14 @@ extension VideoRecordViewController: RecordViewDelegate {
     //中间录制按钮开始录制
     func recordViewDidStart(_ recordView: RecordView) {
         self.recordVideo()
+        self.start()
+
     }
     
     //中间录制按钮结束录制
     func recordViewDidSop(_ recordView: RecordView) {
-        
+        self.stop()
+
     }
 }
 
