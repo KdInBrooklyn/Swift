@@ -24,6 +24,28 @@
 
 - (void)applyVideoEffectsToComposition:(AVMutableVideoComposition *)composition size:(CGSize)size
 {
-
+    //1. Layer set up
+    CALayer *parentLayer = [CALayer layer];
+    CALayer *videoLayer = [CALayer layer];
+    
+    parentLayer.frame = CGRectMake(0.0, 0.0, size.width, size.height);
+    videoLayer.frame = CGRectMake(0.0, 0.0, size.width, size.height);
+    [parentLayer addSublayer:videoLayer];
+    
+    //2. Set up the transform
+    CATransform3D identifyTransform = CATransform3DIdentity;
+    
+    //3. Pick the direction
+    if (_tiltSegment.selectedSegmentIndex == 0) {
+        identifyTransform.m34 = 1.0 / 1000;
+    } else if (_tiltSegment.selectedSegmentIndex == 0) {
+        identifyTransform.m34 = 1.0 / -1000;
+    }
+    
+    //4. Rotate
+    videoLayer.transform = CATransform3DRotate(identifyTransform, M_PI / 6.0, 1.0f, 0.0f, 0.0f);
+    
+    //5. Composition
+    composition.animationTool = [AVVideoCompositionCoreAnimationTool videoCompositionCoreAnimationToolWithPostProcessingAsVideoLayer:videoLayer inLayer:parentLayer];
 }
 @end
