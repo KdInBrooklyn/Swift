@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class CustomAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     weak var transitionContext: UIViewControllerContextTransitioning?

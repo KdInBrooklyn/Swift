@@ -14,14 +14,19 @@
 
 @implementation AddBorderViewController
 
+#pragma mark event response
+// 加载视频按钮的点击事件
 - (IBAction)loadAsset:(id)sender {
+    // 从相册里面获取视频文件
     [self startMediaBrowserFromViewController:self usingDelegate:self];
 }
 
+// 生成视频按钮的点击事件
 - (IBAction)generateOutput:(id)sender {
   [self videoOutput];
 }
 
+// 将合成的效果应用到视频上
 - (void)applyVideoEffectsToComposition:(AVMutableVideoComposition *)composition size:(CGSize)size
 {
     UIImage *borderImage = nil;
@@ -53,7 +58,7 @@
 }
 
 #pragma mark 添加的私有方法
-//通过颜色来创建新的图片
+// 根据颜色来生成图片
 - (UIImage *)imageWithColor: (UIColor *)color rectSize: (CGRect)imageSize {
     CGRect rect = imageSize;
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0.0);

@@ -25,7 +25,6 @@ class VideoRecordViewController: UIViewController {
     var kViewTag: Int = 0
     fileprivate var viewSpace: CGFloat = 10.0
     fileprivate var isRecording: Bool = false   //用来判断是否正在录制视频
-    
     /**
      计算当时视频的录制时长
      */
@@ -131,6 +130,15 @@ class VideoRecordViewController: UIViewController {
 //        return button;
 //        }();
     
+    fileprivate lazy var editorButton: UIButton = {
+        let button: UIButton = UIButton(frame: CGRect.zero)
+        button.setTitle("编辑视频", for: .normal)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.tag = self.kViewTag + 7
+        button.addTarget(self, action: #selector(VideoRecordViewController.eventButtonClicked(sender:)), for: .touchUpInside)
+        
+        return button
+    }()
     
     //MARK: - 实现视频录制需要的几个类
     //负责输入和输出设备之间的数据传递
@@ -154,11 +162,13 @@ class VideoRecordViewController: UIViewController {
     
     //测试视频是否存储在该目录下
     fileprivate var videoPath: String?
+    fileprivate var editorVideoPath: String?
     
     //MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.editorVideoPath = NSTemporaryDirectory().appending("editorSuccess.mov")
         self.view.backgroundColor = UIColor.gray
         self.initViews()
         self.initRecords()
@@ -208,6 +218,66 @@ class VideoRecordViewController: UIViewController {
             self.openVideoPickerController()
         } else if index == 6 { //录制按钮
             self.recordVideo()
+        } else if index == 7 { //视频编辑按钮(添加水印等)
+            let mixComposition: AVMutableComposition = AVMutableComposition()
+            let compositionVideo: AVMutableCompositionTrack = mixComposition.addMutableTrack(withMediaType: AVMediaTypeVideo, preferredTrackID: kCMPersistentTrackID_Invalid)
+            let compositionAudio: AVMutableCompositionTrack = mixComposition.addMutableTrack(withMediaType: AVMediaTypeAudio, preferredTrackID: kCMPersistentTrackID_Invalid)
+            
+            let asset: AVAsset = AVAsset(url: URL(fileURLWithPath: self.videoPath!))
+            let realDuration: CMTime = CMTime(value: asset.duration.value, timescale: asset.duration.timescale)
+            do { // 视频数据
+                try compositionVideo.insertTimeRange(CMTimeRange.init(start: kCMTimeZero, duration: asset.duration), of: asset.tracks(withMediaType: AVMediaTypeVideo)[0], at: kCMTimeZero)
+                compositionVideo.scaleTimeRange(CMTimeRange.init(start: kCMTimeZero, duration: asset.duration), toDuration: realDuration)
+            } catch {
+                print("video error:-----\(error.localizedDescription)")
+            }
+            
+            do {// 音轨数据
+                try compositionAudio.insertTimeRange(CMTimeRange.init(start: kCMTimeZero, duration: asset.duration), of: asset.tracks(withMediaType: AVMediaTypeAudio)[0], at: kCMTimeZero)
+                compositionAudio.scaleTimeRange(CMTimeRange.init(start: kCMTimeZero, duration: asset.duration), toDuration: kCMTimeZero)
+            } catch {
+                print("audio error:-----\(error.localizedDescription)")
+            }
+            
+            // MARK: - 添加水印图片
+            let waterLayer: CALayer = self.generateWaterImage()
+            let parentLayer: CALayer = CALayer()
+            let videoLayer: CALayer = CALayer()
+            
+            parentLayer.frame = CGRect(x: 0.0, y: 0.0, width: 480.0, height: 480.0)
+            videoLayer.frame = parentLayer.frame
+            
+            parentLayer.addSublayer(videoLayer)
+            parentLayer.addSublayer(waterLayer)
+            
+            let videoLayerInstruction: AVMutableVideoCompositionLayerInstruction = AVMutableVideoCompositionLayerInstruction(assetTrack: compositionVideo)
+            
+            
+            let mainInstruction: AVMutableVideoCompositionInstruction = AVMutableVideoCompositionInstruction()
+            mainInstruction.timeRange = CMTimeRange(start: kCMTimeZero, duration: asset.duration)
+            mainInstruction.layerInstructions = [videoLayerInstruction]
+            
+            let mainCompositionInset: AVMutableVideoComposition = AVMutableVideoComposition()
+            mainCompositionInset.renderSize = CGSize(width: 480, height: 480)
+            mainCompositionInset.instructions = [mainInstruction]
+            mainCompositionInset.frameDuration = CMTimeMake(1, 30)
+            mainCompositionInset.animationTool = AVVideoCompositionCoreAnimationTool(postProcessingAsVideoLayer: videoLayer, in: parentLayer)
+            
+            // MARK: - 将编辑好的视频导出来
+            let exportSession: AVAssetExportSession = AVAssetExportSession(asset: mixComposition, presetName: AVAssetExportPresetHighestQuality)!
+            exportSession.outputURL = URL(fileURLWithPath: self.editorVideoPath!)
+            exportSession.outputFileType = AVFileTypeMPEG4
+            exportSession.shouldOptimizeForNetworkUse = true
+            exportSession.videoComposition = mainCompositionInset
+            
+            exportSession.exportAsynchronously(completionHandler: { [weak self] in
+                if let strongSelf = self {
+                    print("导出成功之后的操作，后i面改成保存到相册中去")
+                    
+                    strongSelf.exporterDidFinished(exportSession)
+                }
+            })
+            
         }
     }
     
@@ -260,6 +330,12 @@ class VideoRecordViewController: UIViewController {
         self.view.addSubview(self.btnImport);
         self.view.addSubview(self.recordView);
         self.view.addSubview(self.btnNext);
+        self.view.addSubview(self.editorButton)
+        self.editorButton.snp.makeConstraints { (make: ConstraintMaker) in
+            make.left.equalTo(self.recordView.snp.right).offset(20.0)
+            make.top.equalTo(self.recordView)
+            make.width.height.equalTo(40.0)
+        }
     }
     
     fileprivate func initRecords() {
@@ -388,7 +464,34 @@ class VideoRecordViewController: UIViewController {
         }
         
     }
- 
+    
+    /**
+     生成水印图片
+     */
+    fileprivate func generateWaterImage() -> CALayer {
+        let image: UIImage = UIImage(named: "videowatermark")!//UIImage(contentsOfFile: Bundle.main.path(forResource: "videowatermark", ofType: ".png")!)!
+        let retVal: CALayer = CALayer()
+        retVal.contents = image.cgImage
+        retVal.frame = CGRect(x: 480 - image.size.width, y: 480 - image.size.height, width: image.size.width, height: image.size.height)
+        retVal.masksToBounds = true
+        
+        return retVal
+    }
+    
+    /**
+     视频导出成功之后
+     */
+    fileprivate func exporterDidFinished(_ session: AVAssetExportSession) {
+        if (session.status == AVAssetExportSessionStatus.completed) {
+            let outputFile: URL = session.outputURL!
+            let library: ALAssetsLibrary = ALAssetsLibrary()
+            if (library.videoAtPathIs(compatibleWithSavedPhotosAlbum: outputFile)) {
+                library.writeVideoAtPath(toSavedPhotosAlbum: outputFile, completionBlock: { (assetURL: URL?, error: Error?) in
+                    
+                })
+            }
+        }
+    }
     
     /**
      计时器功能
@@ -428,7 +531,7 @@ class VideoRecordViewController: UIViewController {
     }
 }
 
-//转场代理
+//MARK: - UIViewControllerTransitioningDelegate 转场代理
 extension VideoRecordViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return CustomAnimator()
@@ -439,7 +542,7 @@ extension VideoRecordViewController: UIViewControllerTransitioningDelegate {
     }
 }
 
-//MARK: - 视频文件输出代理
+//MARK: - AVCaptureFileOutputRecordingDelegate 视频文件输出代理
 extension VideoRecordViewController: AVCaptureFileOutputRecordingDelegate {
     //开始录制
     func capture(_ captureOutput: AVCaptureFileOutput!, didStartRecordingToOutputFileAt fileURL: URL!, fromConnections connections: [Any]!) {
@@ -464,10 +567,19 @@ extension VideoRecordViewController: AVCaptureFileOutputRecordingDelegate {
 //                UIApplication.shared.endBackgroundTask(lastBackgroundTaskIdentifier!)
 //            }
             
+            
+            
+            // 获取视频的真实时长
+            let asset: AVAsset = AVAsset(url: URL(fileURLWithPath: self.videoPath!))
+            let realDuration: CMTime = CMTime(value: asset.duration.value, timescale: asset.duration.timescale)
+            print("------------------真实时长\(realDuration)-----------------")
+            let videoTracks: [AVAssetTrack] = asset.tracks(withMediaType: AVMediaTypeVideo)
+            print("-----------------videoCount:\(videoTracks.count)")
         }
     }
 }
 
+// MARK: - RecordViewDelegate
 extension VideoRecordViewController: RecordViewDelegate {
     //中间录制按钮开始录制
     func recordViewDidStart(_ recordView: RecordView) {
@@ -478,12 +590,12 @@ extension VideoRecordViewController: RecordViewDelegate {
     
     //中间录制按钮结束录制
     func recordViewDidSop(_ recordView: RecordView) {
+        self.captureMovieFileOutput.stopRecording()
         self.stop()
-
     }
 }
 
-//MARK: -
+//MARK: - UINavigationControllerDelegate && UIImagePickerControllerDelegate
 extension VideoRecordViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         

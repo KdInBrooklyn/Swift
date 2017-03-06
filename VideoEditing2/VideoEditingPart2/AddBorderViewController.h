@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CommonVideoViewController.h"
 
+// 继承自CommonVideoViewController
 @interface AddBorderViewController : CommonVideoViewController
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *colorSegment;
