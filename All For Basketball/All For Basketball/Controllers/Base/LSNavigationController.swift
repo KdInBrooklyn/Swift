@@ -1,14 +1,14 @@
 //
-//  LSHomeViewController.swift
+//  LSNavigationController.swift
 //  All For Basketball
 //
-//  Created by 李森 on 2017/3/13.
+//  Created by 李森 on 2017/3/28.
 //  Copyright © 2017年 李森. All rights reserved.
 //
 
 import UIKit
 
-class LSHomeViewController: UIViewController {
+class LSNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

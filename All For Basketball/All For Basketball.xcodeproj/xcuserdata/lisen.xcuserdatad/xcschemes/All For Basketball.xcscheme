@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "90E9EFDA1E76D14E002D6FE7"
+               BlueprintIdentifier = "90DC7F2B1E8A99C9000F048E"
                BuildableName = "All For Basketball.app"
                BlueprintName = "All For Basketball"
                ReferencedContainer = "container:All For Basketball.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "90E9EFEE1E76D14E002D6FE7"
+               BlueprintIdentifier = "90DC7F3F1E8A99C9000F048E"
                BuildableName = "All For BasketballTests.xctest"
                BlueprintName = "All For BasketballTests"
                ReferencedContainer = "container:All For Basketball.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "90E9EFF91E76D14E002D6FE7"
+               BlueprintIdentifier = "90DC7F4A1E8A99C9000F048E"
                BuildableName = "All For BasketballUITests.xctest"
                BlueprintName = "All For BasketballUITests"
                ReferencedContainer = "container:All For Basketball.xcodeproj">
@@ -52,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "90E9EFDA1E76D14E002D6FE7"
+            BlueprintIdentifier = "90DC7F2B1E8A99C9000F048E"
             BuildableName = "All For Basketball.app"
             BlueprintName = "All For Basketball"
             ReferencedContainer = "container:All For Basketball.xcodeproj">
@@ -75,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "90E9EFDA1E76D14E002D6FE7"
+            BlueprintIdentifier = "90DC7F2B1E8A99C9000F048E"
             BuildableName = "All For Basketball.app"
             BlueprintName = "All For Basketball"
             ReferencedContainer = "container:All For Basketball.xcodeproj">
@@ -94,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "90E9EFDA1E76D14E002D6FE7"
+            BlueprintIdentifier = "90DC7F2B1E8A99C9000F048E"
             BuildableName = "All For Basketball.app"
             BlueprintName = "All For Basketball"
             ReferencedContainer = "container:All For Basketball.xcodeproj">
