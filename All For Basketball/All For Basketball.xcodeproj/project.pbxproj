@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E0CD8C5D87241C3695693F5 /* Pods_All_For_Basketball.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C5E145AD8B95082D07F5AD /* Pods_All_For_Basketball.framework */; };
+		489E3E681E8B9210007BCAD5 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 489E3E671E8B9210007BCAD5 /* Reveal.framework */; };
 		90DC7F301E8A99C9000F048E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC7F2F1E8A99C9000F048E /* AppDelegate.swift */; };
 		90DC7F351E8A99C9000F048E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90DC7F331E8A99C9000F048E /* Main.storyboard */; };
 		90DC7F371E8A99C9000F048E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90DC7F361E8A99C9000F048E /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		354E1C27F67F59E407C32509 /* Pods-All For Basketball.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-All For Basketball.debug.xcconfig"; path = "Pods/Target Support Files/Pods-All For Basketball/Pods-All For Basketball.debug.xcconfig"; sourceTree = "<group>"; };
+		489E3E671E8B9210007BCAD5 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		90DC7F2C1E8A99C9000F048E /* All For Basketball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "All For Basketball.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DC7F2F1E8A99C9000F048E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90DC7F341E8A99C9000F048E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 		90DC7F6F1E8A9CCD000F048E /* LSTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSTabBarController.swift; sourceTree = "<group>"; };
 		90DC7F711E8A9D15000F048E /* LSNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSNavigationController.swift; sourceTree = "<group>"; };
 		90DC7F731E8A9D38000F048E /* LSBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSBaseViewController.swift; sourceTree = "<group>"; };
+		C8C5E145AD8B95082D07F5AD /* Pods_All_For_Basketball.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_All_For_Basketball.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE339D3CBC1F26CDAF705AF /* Pods-All For Basketball.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-All For Basketball.release.xcconfig"; path = "Pods/Target Support Files/Pods-All For Basketball/Pods-All For Basketball.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E0CD8C5D87241C3695693F5 /* Pods_All_For_Basketball.framework in Frameworks */,
+				489E3E681E8B9210007BCAD5 /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CA52BFCA93C78BC225CE06F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				489E3E671E8B9210007BCAD5 /* Reveal.framework */,
+				C8C5E145AD8B95082D07F5AD /* Pods_All_For_Basketball.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		90DC7F231E8A99C9000F048E = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +102,8 @@
 				90DC7F431E8A99C9000F048E /* All For BasketballTests */,
 				90DC7F4E1E8A99C9000F048E /* All For BasketballUITests */,
 				90DC7F2D1E8A99C9000F048E /* Products */,
+				C7F46EA83F07879D91605654 /* Pods */,
+				3CA52BFCA93C78BC225CE06F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -275,6 +294,15 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		C7F46EA83F07879D91605654 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				354E1C27F67F59E407C32509 /* Pods-All For Basketball.debug.xcconfig */,
+				DFE339D3CBC1F26CDAF705AF /* Pods-All For Basketball.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -282,9 +310,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90DC7F541E8A99C9000F048E /* Build configuration list for PBXNativeTarget "All For Basketball" */;
 			buildPhases = (
+				50BD8C8D6FF655629A5AB8E7 /* [CP] Check Pods Manifest.lock */,
 				90DC7F281E8A99C9000F048E /* Sources */,
 				90DC7F291E8A99C9000F048E /* Frameworks */,
 				90DC7F2A1E8A99C9000F048E /* Resources */,
+				372FC6E59DD8C045E8AFB6D1 /* [CP] Embed Pods Frameworks */,
+				825CC1DA836BABBBE4AAC0C1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -344,6 +375,7 @@
 				TargetAttributes = {
 					90DC7F2B1E8A99C9000F048E = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = J3UJGF3PPS;
 						ProvisioningStyle = Automatic;
 					};
 					90DC7F3F1E8A99C9000F048E = {
@@ -404,6 +436,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		372FC6E59DD8C045E8AFB6D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-All For Basketball/Pods-All For Basketball-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50BD8C8D6FF655629A5AB8E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		825CC1DA836BABBBE4AAC0C1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-All For Basketball/Pods-All For Basketball-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		90DC7F281E8A99C9000F048E /* Sources */ = {
@@ -563,10 +643,38 @@
 		};
 		90DC7F551E8A99C9000F048E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 354E1C27F67F59E407C32509 /* Pods-All For Basketball.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J3UJGF3PPS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "All For Basketball/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"RealReachability\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "video-lisen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -575,10 +683,38 @@
 		};
 		90DC7F561E8A99C9000F048E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFE339D3CBC1F26CDAF705AF /* Pods-All For Basketball.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = J3UJGF3PPS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "All For Basketball/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"RealReachability\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "video-lisen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -658,6 +794,7 @@
 				90DC7F561E8A99C9000F048E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90DC7F571E8A99C9000F048E /* Build configuration list for PBXNativeTarget "All For BasketballTests" */ = {
 			isa = XCConfigurationList;
@@ -666,6 +803,7 @@
 				90DC7F591E8A99C9000F048E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90DC7F5A1E8A99C9000F048E /* Build configuration list for PBXNativeTarget "All For BasketballUITests" */ = {
 			isa = XCConfigurationList;
@@ -674,6 +812,7 @@
 				90DC7F5C1E8A99C9000F048E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
