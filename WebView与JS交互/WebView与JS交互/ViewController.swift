@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //从本地加载html
-        let path: String = Bundle.main.path(forResource: "runboo", ofType: "html")!
+        let path: String = Bundle.main.path(forResource: "index", ofType: "html")!
         webView.loadRequest(URLRequest(url: URL(fileURLWithPath: path)))
         
         //MARK: - app调用js方法

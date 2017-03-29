@@ -5,12 +5,13 @@
 		<title>HTML学习</title>
 		<script>
 			function hi() {
-				alert("checked")
-				return true
+                document.getElementById("test").innerHTML = "插入一段广告";
+                return true;
 			}
 		</script>
 	</head>
 	<body>
+        <p id="test"></p>
 		<form id = "test-form" onsubmit="return hi()">
 			<input type="test" name="lisen">
 			<button type="submit">Submit</button>
