@@ -9,15 +9,21 @@
 /* Begin PBXBuildFile section */
 		3E0CD8C5D87241C3695693F5 /* Pods_All_For_Basketball.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C5E145AD8B95082D07F5AD /* Pods_All_For_Basketball.framework */; };
 		489E3E681E8B9210007BCAD5 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 489E3E671E8B9210007BCAD5 /* Reveal.framework */; };
+		489E3E861E8BD343007BCAD5 /* LSBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489E3E831E8BD343007BCAD5 /* LSBaseViewController.swift */; };
+		489E3E871E8BD343007BCAD5 /* LSNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489E3E841E8BD343007BCAD5 /* LSNavigationController.swift */; };
+		489E3E881E8BD343007BCAD5 /* LSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489E3E851E8BD343007BCAD5 /* LSTabBarController.swift */; };
+		489E3E8B1E8BD353007BCAD5 /* LSLivesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489E3E891E8BD353007BCAD5 /* LSLivesViewController.swift */; };
+		489E3E8C1E8BD353007BCAD5 /* LSLivesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489E3E8A1E8BD353007BCAD5 /* LSLivesViewController.xib */; };
+		489E3E8F1E8BD362007BCAD5 /* LSNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489E3E8D1E8BD362007BCAD5 /* LSNewsViewController.swift */; };
+		489E3E901E8BD362007BCAD5 /* LSNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489E3E8E1E8BD362007BCAD5 /* LSNewsViewController.xib */; };
+		489E3E971E8BD4BF007BCAD5 /* LSTrainningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489E3E951E8BD4BF007BCAD5 /* LSTrainningViewController.swift */; };
+		489E3E981E8BD4BF007BCAD5 /* LSTrainningViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489E3E961E8BD4BF007BCAD5 /* LSTrainningViewController.xib */; };
 		90DC7F301E8A99C9000F048E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC7F2F1E8A99C9000F048E /* AppDelegate.swift */; };
 		90DC7F351E8A99C9000F048E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90DC7F331E8A99C9000F048E /* Main.storyboard */; };
 		90DC7F371E8A99C9000F048E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90DC7F361E8A99C9000F048E /* Assets.xcassets */; };
 		90DC7F3A1E8A99C9000F048E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90DC7F381E8A99C9000F048E /* LaunchScreen.storyboard */; };
 		90DC7F451E8A99C9000F048E /* All_For_BasketballTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC7F441E8A99C9000F048E /* All_For_BasketballTests.swift */; };
 		90DC7F501E8A99C9000F048E /* All_For_BasketballUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC7F4F1E8A99C9000F048E /* All_For_BasketballUITests.swift */; };
-		90DC7F701E8A9CCD000F048E /* LSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC7F6F1E8A9CCD000F048E /* LSTabBarController.swift */; };
-		90DC7F721E8A9D15000F048E /* LSNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC7F711E8A9D15000F048E /* LSNavigationController.swift */; };
-		90DC7F741E8A9D38000F048E /* LSBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC7F731E8A9D38000F048E /* LSBaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,15 @@
 /* Begin PBXFileReference section */
 		354E1C27F67F59E407C32509 /* Pods-All For Basketball.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-All For Basketball.debug.xcconfig"; path = "Pods/Target Support Files/Pods-All For Basketball/Pods-All For Basketball.debug.xcconfig"; sourceTree = "<group>"; };
 		489E3E671E8B9210007BCAD5 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		489E3E831E8BD343007BCAD5 /* LSBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSBaseViewController.swift; sourceTree = "<group>"; };
+		489E3E841E8BD343007BCAD5 /* LSNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSNavigationController.swift; sourceTree = "<group>"; };
+		489E3E851E8BD343007BCAD5 /* LSTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSTabBarController.swift; sourceTree = "<group>"; };
+		489E3E891E8BD353007BCAD5 /* LSLivesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSLivesViewController.swift; sourceTree = "<group>"; };
+		489E3E8A1E8BD353007BCAD5 /* LSLivesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSLivesViewController.xib; sourceTree = "<group>"; };
+		489E3E8D1E8BD362007BCAD5 /* LSNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSNewsViewController.swift; sourceTree = "<group>"; };
+		489E3E8E1E8BD362007BCAD5 /* LSNewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSNewsViewController.xib; sourceTree = "<group>"; };
+		489E3E951E8BD4BF007BCAD5 /* LSTrainningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSTrainningViewController.swift; sourceTree = "<group>"; };
+		489E3E961E8BD4BF007BCAD5 /* LSTrainningViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSTrainningViewController.xib; sourceTree = "<group>"; };
 		90DC7F2C1E8A99C9000F048E /* All For Basketball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "All For Basketball.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DC7F2F1E8A99C9000F048E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90DC7F341E8A99C9000F048E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,9 +67,6 @@
 		90DC7F4B1E8A99C9000F048E /* All For BasketballUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "All For BasketballUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DC7F4F1E8A99C9000F048E /* All_For_BasketballUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_For_BasketballUITests.swift; sourceTree = "<group>"; };
 		90DC7F511E8A99C9000F048E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90DC7F6F1E8A9CCD000F048E /* LSTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSTabBarController.swift; sourceTree = "<group>"; };
-		90DC7F711E8A9D15000F048E /* LSNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSNavigationController.swift; sourceTree = "<group>"; };
-		90DC7F731E8A9D38000F048E /* LSBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSBaseViewController.swift; sourceTree = "<group>"; };
 		C8C5E145AD8B95082D07F5AD /* Pods_All_For_Basketball.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_All_For_Basketball.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE339D3CBC1F26CDAF705AF /* Pods-All For Basketball.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-All For Basketball.release.xcconfig"; path = "Pods/Target Support Files/Pods-All For Basketball/Pods-All For Basketball.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +107,155 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		489E3E701E8BD311007BCAD5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				489E3E821E8BD343007BCAD5 /* Base */,
+				489E3E721E8BD311007BCAD5 /* Lives */,
+				489E3E731E8BD311007BCAD5 /* News */,
+				489E3E741E8BD311007BCAD5 /* Tranning */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		489E3E721E8BD311007BCAD5 /* Lives */ = {
+			isa = PBXGroup;
+			children = (
+				489E3E891E8BD353007BCAD5 /* LSLivesViewController.swift */,
+				489E3E8A1E8BD353007BCAD5 /* LSLivesViewController.xib */,
+			);
+			path = Lives;
+			sourceTree = "<group>";
+		};
+		489E3E731E8BD311007BCAD5 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				489E3E8D1E8BD362007BCAD5 /* LSNewsViewController.swift */,
+				489E3E8E1E8BD362007BCAD5 /* LSNewsViewController.xib */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		489E3E741E8BD311007BCAD5 /* Tranning */ = {
+			isa = PBXGroup;
+			children = (
+				489E3E951E8BD4BF007BCAD5 /* LSTrainningViewController.swift */,
+				489E3E961E8BD4BF007BCAD5 /* LSTrainningViewController.xib */,
+			);
+			path = Tranning;
+			sourceTree = "<group>";
+		};
+		489E3E751E8BD311007BCAD5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				489E3E761E8BD311007BCAD5 /* Base */,
+				489E3E771E8BD311007BCAD5 /* Lives */,
+				489E3E781E8BD311007BCAD5 /* News */,
+				489E3E791E8BD311007BCAD5 /* Tranning */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		489E3E761E8BD311007BCAD5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		489E3E771E8BD311007BCAD5 /* Lives */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lives;
+			sourceTree = "<group>";
+		};
+		489E3E781E8BD311007BCAD5 /* News */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		489E3E791E8BD311007BCAD5 /* Tranning */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tranning;
+			sourceTree = "<group>";
+		};
+		489E3E7A1E8BD311007BCAD5 /* Utilties */ = {
+			isa = PBXGroup;
+			children = (
+				489E3E7B1E8BD311007BCAD5 /* Extension */,
+				489E3E7C1E8BD311007BCAD5 /* Third */,
+			);
+			path = Utilties;
+			sourceTree = "<group>";
+		};
+		489E3E7B1E8BD311007BCAD5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		489E3E7C1E8BD311007BCAD5 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Third;
+			sourceTree = "<group>";
+		};
+		489E3E7D1E8BD311007BCAD5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				489E3E7E1E8BD311007BCAD5 /* Base */,
+				489E3E7F1E8BD311007BCAD5 /* Lives */,
+				489E3E801E8BD311007BCAD5 /* News */,
+				489E3E811E8BD311007BCAD5 /* Tranning */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		489E3E7E1E8BD311007BCAD5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		489E3E7F1E8BD311007BCAD5 /* Lives */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lives;
+			sourceTree = "<group>";
+		};
+		489E3E801E8BD311007BCAD5 /* News */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		489E3E811E8BD311007BCAD5 /* Tranning */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tranning;
+			sourceTree = "<group>";
+		};
+		489E3E821E8BD343007BCAD5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				489E3E831E8BD343007BCAD5 /* LSBaseViewController.swift */,
+				489E3E841E8BD343007BCAD5 /* LSNavigationController.swift */,
+				489E3E851E8BD343007BCAD5 /* LSTabBarController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		90DC7F231E8A99C9000F048E = {
 			isa = PBXGroup;
 			children = (
@@ -120,10 +281,10 @@
 		90DC7F2E1E8A99C9000F048E /* All For Basketball */ = {
 			isa = PBXGroup;
 			children = (
-				90DC7F651E8A9C5C000F048E /* Utilties */,
-				90DC7F611E8A9C5C000F048E /* Models */,
-				90DC7F681E8A9C5C000F048E /* Views */,
-				90DC7F5D1E8A9C5C000F048E /* Controllers */,
+				489E3E7A1E8BD311007BCAD5 /* Utilties */,
+				489E3E751E8BD311007BCAD5 /* Models */,
+				489E3E7D1E8BD311007BCAD5 /* Views */,
+				489E3E701E8BD311007BCAD5 /* Controllers */,
 				90DC7F2F1E8A99C9000F048E /* AppDelegate.swift */,
 				90DC7F331E8A99C9000F048E /* Main.storyboard */,
 				90DC7F361E8A99C9000F048E /* Assets.xcassets */,
@@ -149,149 +310,6 @@
 				90DC7F511E8A99C9000F048E /* Info.plist */,
 			);
 			path = "All For BasketballUITests";
-			sourceTree = "<group>";
-		};
-		90DC7F5D1E8A9C5C000F048E /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				90DC7F6C1E8A9C9D000F048E /* Base */,
-				90DC7F5E1E8A9C5C000F048E /* Live */,
-				90DC7F5F1E8A9C5C000F048E /* News */,
-				90DC7F601E8A9C5C000F048E /* trainning */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		90DC7F5E1E8A9C5C000F048E /* Live */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Live;
-			sourceTree = "<group>";
-		};
-		90DC7F5F1E8A9C5C000F048E /* News */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = News;
-			sourceTree = "<group>";
-		};
-		90DC7F601E8A9C5C000F048E /* trainning */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = trainning;
-			sourceTree = "<group>";
-		};
-		90DC7F611E8A9C5C000F048E /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				90DC7F6E1E8A9CB4000F048E /* Base */,
-				90DC7F621E8A9C5C000F048E /* Live */,
-				90DC7F631E8A9C5C000F048E /* News */,
-				90DC7F641E8A9C5C000F048E /* trainning */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		90DC7F621E8A9C5C000F048E /* Live */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Live;
-			sourceTree = "<group>";
-		};
-		90DC7F631E8A9C5C000F048E /* News */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = News;
-			sourceTree = "<group>";
-		};
-		90DC7F641E8A9C5C000F048E /* trainning */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = trainning;
-			sourceTree = "<group>";
-		};
-		90DC7F651E8A9C5C000F048E /* Utilties */ = {
-			isa = PBXGroup;
-			children = (
-				90DC7F661E8A9C5C000F048E /* Extensions */,
-				90DC7F671E8A9C5C000F048E /* Thirds */,
-			);
-			path = Utilties;
-			sourceTree = "<group>";
-		};
-		90DC7F661E8A9C5C000F048E /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		90DC7F671E8A9C5C000F048E /* Thirds */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Thirds;
-			sourceTree = "<group>";
-		};
-		90DC7F681E8A9C5C000F048E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				90DC7F6D1E8A9CAA000F048E /* Base */,
-				90DC7F691E8A9C5C000F048E /* Live */,
-				90DC7F6A1E8A9C5C000F048E /* News */,
-				90DC7F6B1E8A9C5C000F048E /* trainning */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		90DC7F691E8A9C5C000F048E /* Live */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Live;
-			sourceTree = "<group>";
-		};
-		90DC7F6A1E8A9C5C000F048E /* News */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = News;
-			sourceTree = "<group>";
-		};
-		90DC7F6B1E8A9C5C000F048E /* trainning */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = trainning;
-			sourceTree = "<group>";
-		};
-		90DC7F6C1E8A9C9D000F048E /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				90DC7F731E8A9D38000F048E /* LSBaseViewController.swift */,
-				90DC7F711E8A9D15000F048E /* LSNavigationController.swift */,
-				90DC7F6F1E8A9CCD000F048E /* LSTabBarController.swift */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		90DC7F6D1E8A9CAA000F048E /* Base */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		90DC7F6E1E8A9CB4000F048E /* Base */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Base;
 			sourceTree = "<group>";
 		};
 		C7F46EA83F07879D91605654 /* Pods */ = {
@@ -417,7 +435,10 @@
 			files = (
 				90DC7F3A1E8A99C9000F048E /* LaunchScreen.storyboard in Resources */,
 				90DC7F371E8A99C9000F048E /* Assets.xcassets in Resources */,
+				489E3E981E8BD4BF007BCAD5 /* LSTrainningViewController.xib in Resources */,
 				90DC7F351E8A99C9000F048E /* Main.storyboard in Resources */,
+				489E3E8C1E8BD353007BCAD5 /* LSLivesViewController.xib in Resources */,
+				489E3E901E8BD362007BCAD5 /* LSNewsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,10 +511,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90DC7F701E8A9CCD000F048E /* LSTabBarController.swift in Sources */,
+				489E3E861E8BD343007BCAD5 /* LSBaseViewController.swift in Sources */,
 				90DC7F301E8A99C9000F048E /* AppDelegate.swift in Sources */,
-				90DC7F741E8A9D38000F048E /* LSBaseViewController.swift in Sources */,
-				90DC7F721E8A9D15000F048E /* LSNavigationController.swift in Sources */,
+				489E3E8B1E8BD353007BCAD5 /* LSLivesViewController.swift in Sources */,
+				489E3E881E8BD343007BCAD5 /* LSTabBarController.swift in Sources */,
+				489E3E8F1E8BD362007BCAD5 /* LSNewsViewController.swift in Sources */,
+				489E3E871E8BD343007BCAD5 /* LSNavigationController.swift in Sources */,
+				489E3E971E8BD4BF007BCAD5 /* LSTrainningViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,6 +670,7 @@
 			baseConfigurationReference = 354E1C27F67F59E407C32509 /* Pods-All For Basketball.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = J3UJGF3PPS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -678,6 +703,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "video-lisen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -686,6 +712,7 @@
 			baseConfigurationReference = DFE339D3CBC1F26CDAF705AF /* Pods-All For Basketball.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = J3UJGF3PPS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -718,6 +745,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "video-lisen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
