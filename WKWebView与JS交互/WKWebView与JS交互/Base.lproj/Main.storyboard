@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jUR-IE-LJe">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,11 +21,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJd-Tv-hay">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eJd-Tv-hay">
+                                <rect key="frame" x="0.0" y="20" width="300" height="44"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="b20-Da-ihE">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="b20-Da-ihE">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
                                         <color key="backgroundColor" red="0.54023574374035688" green="0.68908253205128212" blue="0.45572120545492606" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -54,6 +54,9 @@
                                             <constraint firstAttribute="height" constant="44" id="qkt-bx-iJU"/>
                                         </constraints>
                                         <state key="normal" title="R"/>
+                                        <connections>
+                                            <action selector="refreshRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8fV-6j-QeM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKW-Yi-EUY">
                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
@@ -64,6 +67,9 @@
                                         <state key="normal" title="&lt;">
                                             <color key="titleColor" red="1" green="0.097813444271779626" blue="0.11708772097906284" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ynq-fb-BAC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9X-d6-Jn8">
                                         <rect key="frame" x="144" y="0.0" width="44" height="44"/>
@@ -72,6 +78,9 @@
                                             <constraint firstAttribute="width" constant="44" id="c66-hJ-RVa"/>
                                         </constraints>
                                         <state key="normal" title="&gt;"/>
+                                        <connections>
+                                            <action selector="go:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gqk-q7-M4D"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -85,24 +94,35 @@
                                     <constraint firstAttribute="height" constant="44" id="tZ3-HK-8eL"/>
                                 </constraints>
                             </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LcY-oi-jaY">
+                                <rect key="frame" x="0.0" y="64" width="375" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="wQK-DL-utB"/>
+                                </constraints>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="LcY-oi-jaY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5Lp-bP-1b4"/>
                             <constraint firstAttribute="trailing" secondItem="eJd-Tv-hay" secondAttribute="trailing" id="7TV-xr-Zm4"/>
+                            <constraint firstItem="LcY-oi-jaY" firstAttribute="top" secondItem="eJd-Tv-hay" secondAttribute="bottom" id="CYH-9a-rTS"/>
                             <constraint firstAttribute="bottom" secondItem="Jvc-8n-NWY" secondAttribute="bottom" id="FgW-gP-iw8"/>
                             <constraint firstAttribute="trailing" secondItem="eJd-Tv-hay" secondAttribute="trailing" id="POR-5D-qZZ"/>
                             <constraint firstItem="eJd-Tv-hay" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="U4m-Ra-dDx"/>
                             <constraint firstItem="eJd-Tv-hay" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="VcO-6q-r8r"/>
                             <constraint firstItem="Jvc-8n-NWY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dkx-QX-mSb"/>
+                            <constraint firstAttribute="trailing" secondItem="LcY-oi-jaY" secondAttribute="trailing" id="eMg-mo-0LC"/>
                             <constraint firstAttribute="trailing" secondItem="Jvc-8n-NWY" secondAttribute="trailing" id="gz3-LE-4Ik"/>
                             <constraint firstItem="eJd-Tv-hay" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="z9w-8c-qr1"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="uVh-sf-Y1W"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="barView" destination="eJd-Tv-hay" id="S7d-Us-VuC"/>
                         <outlet property="leftBtn" destination="NKW-Yi-EUY" id="VW2-y7-JCX"/>
+                        <outlet property="progressView" destination="LcY-oi-jaY" id="qD9-RI-8eL"/>
                         <outlet property="refreshBtn" destination="Mh1-B5-Hsy" id="poP-DO-v6X"/>
                         <outlet property="rightBtn" destination="o9X-d6-Jn8" id="qBt-he-5oX"/>
                         <outlet property="toolBarView" destination="Jvc-8n-NWY" id="t17-Hu-DgK"/>
@@ -111,6 +131,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="964" y="35.532233883058474"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9rT-97-iVe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jUR-IE-LJe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iyd-aL-cjH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="epj-Of-I1i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ue6-Fc-SCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.600000000000001" y="689.5052473763119"/>
         </scene>
     </scenes>
 </document>
